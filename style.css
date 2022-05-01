@@ -54,7 +54,7 @@ body {
 	width: 90%;
 	height: 100%;
 	cursor: pointer;
-	background: url('/mole.png');
+	background: url('./mole.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 10% 50%;
