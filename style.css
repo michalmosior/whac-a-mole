@@ -29,7 +29,7 @@ body {
 	align-items: center;
 	width: 90%;
 	max-width: 500px;
-	height: 90vh;
+	height: 80vh;
 	margin: auto auto;
 	background-color: transparent;
 }
@@ -50,7 +50,7 @@ body {
 
 .mole {
 	position: absolute;
-	top: -5%;
+	top: -10%;
 	width: 90%;
 	height: 100%;
 	cursor: pointer;
@@ -70,16 +70,16 @@ body {
 
 @media (min-width: 576px) {
 	.mole {
-		top: -15%;
+		top: -20%;
 	}
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.mole {
-		top: 0;
+		top: -8%;
 	}
 }
 @media (min-width: 1900px) {
 	.mole {
-		top: -5%;
+		top: -10%;
 	}
 }
