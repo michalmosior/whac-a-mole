@@ -7,7 +7,7 @@ const timer = document.querySelector('.time');
 const gameField = document.querySelector('.container');
 const scorePanel = document.querySelector('.score-panel');
 let point = 0;
-let time = 10;
+let time = 60;
 let click = 0;
 
 let interval;
