@@ -83,8 +83,6 @@ body {
 }
 
 .mole {
-	/*position: absolute;
-	top: -0.2vh;*/
 	width: 90%;
 	height: 100%;
 	cursor: pointer;
@@ -94,6 +92,24 @@ body {
 	background-position: 10% 50%;
 }
 
+.score-panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	position: absolute;
+	top: 25%;
+	width: 80%;
+	height: 50vh;
+	padding-left: 2rem;
+	background-color: rgba(49, 127, 49, 0.8);
+	border-radius: 50px;
+}
+.txt {
+	font-size: 4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
 .none {
 	display: none;
 }
@@ -101,10 +117,12 @@ body {
 .block {
 	display: block;
 }
+.flex {
+	display: flex;
+}
 
 @media (min-width: 576px) {
 	.item {
 		height: 140px;
 	}
 }
-

@@ -4,22 +4,30 @@ const moles = document.querySelectorAll('.mole');
 const startBtn = document.querySelector('.start');
 const resetBtn = document.querySelector('.reset');
 const timer = document.querySelector('.time');
+const gameField = document.querySelector('.container');
+const scorePanel = document.querySelector('.score-panel');
 let point = 0;
-let time = 60;
+let time = 10;
+let click = 0;
 
 let interval;
 let timeInterval;
 
 const startGame = () => {
+	click = 0;
 	startBtn.classList.remove('block');
 	startBtn.classList.add('none');
 	timeInterval = setInterval(startTimer, 1000);
 	interval = setInterval(showMole, 800);
+	gameField.addEventListener('click', clickCounter);
 };
 
 const startTimer = () => {
 	time--;
 	timer.textContent = `${time}`;
+	if (time <= 0) {
+		endGame();
+	}
 };
 
 function showMole() {
@@ -47,11 +55,31 @@ const addPoint = (e) => {
 const reset = () => {
 	point = 0;
 	time = 60;
+	click = 0;
 	points.textContent = `${point}`;
 	timer.textContent = `${time}`;
 	startBtn.classList.add('block');
 	clearInterval(interval);
 	clearInterval(timeInterval);
+};
+
+const clickCounter = () => {
+	click++;
+	console.log(click);
+};
+
+const endGame = () => {
+	const score = document.querySelector('.score');
+	const clicks = document.querySelector('.shots');
+	const onTarget = document.querySelector('.on-target');
+	const procent = point / click;
+	clearInterval(timeInterval);
+	clearInterval(interval);
+	score.textContent = `Score: ${point}`;
+	clicks.textContent = `Shots: ${click}`;
+	onTarget.textContent = `On target: ${procent.toFixed(2) * 100}%`;
+	scorePanel.classList.add('flex');
+	scorePanel.classList.remove('none');
 };
 
 startBtn.addEventListener('click', startGame);
