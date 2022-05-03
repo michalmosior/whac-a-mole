@@ -75,7 +75,10 @@ const endGame = () => {
 	const personalBestTxt = document.querySelector('.pb');
 	const procent = point / click;
 	let personalBest = localStorage.getItem('score');
-	if (parseFloat(personalBest) < `${point}`) {
+	if (
+		parseFloat(personalBest) < `${point}` ||
+		localStorage.getItem('score') === null
+	) {
 		localStorage.setItem('score', `${point}`);
 	}
 	clearInterval(timeInterval);
