@@ -88,6 +88,7 @@ const closeScorePanel = () => {
 		scorePanel.classList.remove('flex');
 		scorePanel.classList.add('none');
 	}
+	reset()
 };
 
 startBtn.addEventListener('click', startGame);
