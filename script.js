@@ -66,7 +66,6 @@ const reset = () => {
 
 const clickCounter = () => {
 	click++;
-	console.log(click);
 };
 
 const endGame = () => {
