@@ -21,7 +21,6 @@ body {
 }
 .control-panel {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
@@ -57,7 +56,6 @@ body {
 }
 .container {
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
@@ -130,7 +128,6 @@ body {
 .flex {
 	display: flex;
 }
-
 @media (min-width: 576px) {
 	.item {
 		height: 140px;
