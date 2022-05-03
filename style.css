@@ -26,8 +26,7 @@ body {
 	align-items: center;
 	width: 100%;
 	max-width: 500px;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding: 0 5% 0 5%;
 }
 .points,
 .time {
@@ -87,7 +86,7 @@ body {
 	width: 90%;
 	height: 100%;
 	cursor: pointer;
-	background: url('./mole.png');
+	background-image: url('./mole.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 10% 50%;
@@ -103,8 +102,7 @@ body {
 	width: 80%;
 	max-width: 700px;
 	height: 50vh;
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding: 0 2rem 0 2rem;
 	background-color: rgb(49, 127, 49);
 	border-radius: 50px;
 	z-index: 3;
