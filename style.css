@@ -31,8 +31,10 @@ body {
 .time {
 	font-size: 1.6rem;
 	height: 10vh;
+	width: 25%;
 	line-height: 10vh;
 	font-weight: 900;
+	text-align: center;
 	background-color: transparent;
 }
 .reset {

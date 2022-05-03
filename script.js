@@ -72,12 +72,18 @@ const endGame = () => {
 	const score = document.querySelector('.score');
 	const clicks = document.querySelector('.shots');
 	const onTarget = document.querySelector('.on-target');
+	const personalBestTxt = document.querySelector('.pb');
 	const procent = point / click;
+	let personalBest = localStorage.getItem('score');
+	if (parseFloat(personalBest) < `${point}`) {
+		localStorage.setItem('score', `${point}`);
+	}
 	clearInterval(timeInterval);
 	clearInterval(interval);
 	score.textContent = `Score: ${point}`;
 	clicks.textContent = `Shots: ${click}`;
-	onTarget.textContent = `On target: ${procent.toFixed(2) * 100}%`;
+	onTarget.textContent = `On target: ${(procent.toFixed(2) * 100).toFixed(0)}%`;
+	personalBestTxt.textContent = 'PB: ' + localStorage.getItem('score');
 	scorePanel.classList.add('flex');
 	scorePanel.classList.remove('none');
 };
@@ -87,7 +93,7 @@ const closeScorePanel = () => {
 		scorePanel.classList.remove('flex');
 		scorePanel.classList.add('none');
 	}
-	reset()
+	reset();
 };
 
 startBtn.addEventListener('click', startGame);
