@@ -6,6 +6,7 @@ const resetBtn = document.querySelector('.reset');
 const timer = document.querySelector('.time');
 const gameField = document.querySelector('.container');
 const scorePanel = document.querySelector('.score-panel');
+const closeBtn = document.querySelector('.close');
 let point = 0;
 let time = 60;
 let click = 0;
@@ -82,8 +83,16 @@ const endGame = () => {
 	scorePanel.classList.remove('none');
 };
 
+const closeScorePanel = () => {
+	if (scorePanel.classList.contains('flex')) {
+		scorePanel.classList.remove('flex');
+		scorePanel.classList.add('none');
+	}
+};
+
 startBtn.addEventListener('click', startGame);
 moles.forEach((el) => {
 	el.addEventListener('click', addPoint);
 });
 resetBtn.addEventListener('click', reset);
+closeBtn.addEventListener('click', closeScorePanel);

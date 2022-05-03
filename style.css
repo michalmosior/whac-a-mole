@@ -41,7 +41,8 @@ body {
 	font-size: 0.8rem;
 }
 .reset,
-.start {
+.start,
+.close {
 	border: none;
 	cursor: pointer;
 	padding: 0.5rem 1.4rem;
@@ -100,15 +101,26 @@ body {
 	position: absolute;
 	top: 25%;
 	width: 80%;
+	max-width: 700px;
 	height: 50vh;
 	padding-left: 2rem;
-	background-color: rgba(49, 127, 49, 0.8);
+	padding-right: 2rem;
+	background-color: rgb(49, 127, 49);
 	border-radius: 50px;
+	z-index: 3;
 }
 .txt {
-	font-size: 4rem;
+	font-size: 1.6rem;
 	font-weight: 700;
 	text-transform: uppercase;
+	color: rgb(22, 22, 22);
+}
+.close {
+	align-self: center;
+	background-color: rgb(199, 51, 51);
+}
+.close:hover {
+	background-color: rgb(236, 48, 48);
 }
 .none {
 	display: none;
@@ -124,5 +136,28 @@ body {
 @media (min-width: 576px) {
 	.item {
 		height: 140px;
+	}
+	.txt {
+		font-size: 2.4rem;
+	}
+	.close {
+		font-size: 1.2rem;
+	}
+}
+@media (min-width: 768px) {
+	.txt {
+		font-size: 3rem;
+	}
+	.close {
+		font-size: 1.8rem;
+		padding: 0.8rem 2rem;
+	}
+}
+@media (min-width: 1900px) {
+	.txt {
+		font-size: 3.2rem;
+	}
+	.close {
+		font-size: 2rem;
 	}
 }
